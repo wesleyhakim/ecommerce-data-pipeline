@@ -96,7 +96,7 @@ Beberapa hal yang harus diperhatikan ketika menjalankan program ini adalah:
     docker cp "\your\data_raw\file\path" postgres:/tmp/data.csv
     ```
     2. Koneksikan pgAdmin dengan server postgres dari docker container. Gunakan host, port, user, dan password sesuai konfigurasi file docker postgres dan .env.
-    3. Setelah berhasil terkoneksi dengan server postgres docker, jalankan kode SQL `-- method 2` pada `sql_ddl_syntax.txt`. Sesuaikan juga nama tabel dan isi kolom dari tabel, jika directory copy berbeda dengan perintah yang diberikan di atas, sesuaikan juga dengan directory copy yang telah dilakukan..
+    3. Setelah berhasil terkoneksi dengan server postgres docker, jalankan kode SQL `-- method 2` pada `sql_ddl_syntax.txt`. Sesuaikan juga nama tabel dan isi kolom dari tabel, jika directory copy berbeda dengan perintah yang diberikan di atas, sesuaikan juga dengan directory copy yang telah dilakukan.
 
 ## Stacks
 Project ini menggunakan bahasa pemrograman Python untuk membuat DAG serta data validation. Library Python yang digunakan adalah pandas, airflow, elasticsearch, dan great_expectations. Tools lainnya yang digunakan adalah PostgreSQL, Docker, Apache Airflow, Elastic Search, dan Kibana.
