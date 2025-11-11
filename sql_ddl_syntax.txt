@@ -1,0 +1,30 @@
+-- buat table terlebih dahulu jika tidak ada
+CREATE TABLE IF NOT EXISTS table_m3
+(
+	"ID" INT,
+	"Warehouse_block" VARCHAR(5),
+	"Mode_of_Shipment" VARCHAR(10),
+	"Customer_care_calls" INT,
+	"Customer_rating" FLOAT,
+	"Cost_of_the_Product" FLOAT,
+	"Prior_purchases" INT,
+	"Product_importance" VARCHAR(10),
+	"Gender" VARCHAR(5),
+	"Discount_offered" FLOAT,
+	"Weight_in_gms" FLOAT,
+	"Reached.on.Time_Y.N" INT
+
+);
+
+-- copy file csv kepada database postgresql docker
+-- method 1, copy file dari komputer lokal ke database PostgreSQL docker
+\COPY table_m3 
+FROM '\your\data_raw\file\path' 
+DELIMITER ',' 
+CSV HEADER;
+
+-- method 2, copy file dari container docker menuju database PostgreSQL docker
+COPY table_m3 
+FROM '/tmp/data.csv'  
+DELIMITER ',' 
+CSV HEADER;
